@@ -1,19 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -24,15 +15,66 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+  width: 450px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cell {
+  min-width: 145px;
+  height: 145px;
+  border: solid 1px white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: transparent;
+  background-color: transparent;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.cell:disabled {
+  cursor: not-allowed;
+}
+
+.cross {
+  font-size: 100px;
+  color: white;
+}
+
+.circle {
+  font-size: 150px;
+  color: white;
+}
+
+.reset-btn {
+  background-color: transparent;
+  border: solid 1px white;
+  color: white;
+  font-size: 34px;
+  padding: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.reset-btn:hover {
+  background-color: white;
+  color: #282c34;
+  cursor: pointer;
+}
+
+.info-header {
+  margin-bottom: 25px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.winning-cell {
+  background-color: #40735b;
 }
